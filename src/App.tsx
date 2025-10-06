@@ -94,7 +94,7 @@ const App: React.FC = () => {
   );
   const [id, setId] = useState<string>("");
   const [key, setKey] = useState<string>("");
-  const [setDebug] = useState<any>(null);
+  const [debug, setDebug] = useState<any>(null);
   const [copied, setCopied] = useState(false);
 
   useEffect(() => {
@@ -104,6 +104,7 @@ const App: React.FC = () => {
   const handleGenerate = () => {
     setKey("");
     setDebug(null);
+    console.log(debug)
     const result = generateKeyFromDisplayedId(id.trim());
     if (!result.formattedKey) {
       alert("ID invalide — entre un ID affiché (format xxxx-xxxx-xxxx-xxxx) ou 16 hex.");
