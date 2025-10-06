@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useState } from "react";
 import CryptoJS from "crypto-js";
 
 /** CODE GPLAY-TEST-ACCESS */
@@ -94,7 +94,7 @@ const App: React.FC = () => {
   );
   const [id, setId] = useState<string>("");
   const [key, setKey] = useState<string>("");
-  const [debug, setDebug] = useState<any>(null);
+  const [setDebug] = useState<any>(null);
   const [copied, setCopied] = useState(false);
 
   useEffect(() => {
